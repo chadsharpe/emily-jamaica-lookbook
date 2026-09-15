@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emily · Jamaica · March 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6efe4;
+  --ink:#1a221e;
+  --teak:#7a4e2d;
+  --teak-soft:#c4a574;
+  --muted:#5c6a63;
+  --deep:#0d1816;
+  --cream:#f7efe4;
+  --green:#1e3a32;
+  --nest:#efe6d6;
+  --pad-x:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--deep);
+  color:var(--cream);
+  font-family:Outfit,system-ui,sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-text-size-adjust:100%;
+}
+a{color:#e8d7b8; text-underline-offset:3px}
+a:hover{color:#fff}
+img{display:block; max-width:100%}
+
+/* —— HERO (full-bleed tall viewport; portrait sources OK) —— */
+.hero{
+  position:relative;
+  min-height:100svh;
+  min-height:100dvh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+}
+.hero img.bg{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-scrim{
+  position:absolute; inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(8,14,13,.82) 0%, rgba(8,14,13,.55) 28%, rgba(8,14,13,.18) 52%, transparent 70%),
+    linear-gradient(180deg, transparent 18%, rgba(8,14,13,.2) 48%, rgba(8,14,13,.72) 78%, rgba(8,14,13,.94) 100%);
+}
+.hero .copy{
+  position:relative;
+  z-index:2;
+  padding:0 var(--pad-x) 8vh;
+  max-width:40em;
+}
+.kicker{
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 14px;
+}
+.hero h1{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(42px, 12vw, 96px);
+  line-height:.96;
+  letter-spacing:-.03em;
+  color:var(--cream);
+  margin:0 0 18px;
+  text-shadow:0 2px 28px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4);
+}
+.lede{
+  font-weight:300;
+  font-size:clamp(16px, 4.2vw, 21px);
+  line-height:1.55;
+  color:#f0e6d4;
+  margin:0;
+  max-width:34em;
+  text-shadow:0 1px 16px rgba(0,0,0,.45);
+}
+.meta{
+  margin-top:28px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+}
+
+/* —— DATE RAIL (thumb-friendly sticky) —— */
+.rail{
+  position:sticky;
+  top:0;
+  z-index:40;
+  display:flex;
+  gap:2px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:10px var(--pad-x);
+  background:#1a221e;
+  border-bottom:1px solid rgba(196,165,116,.22);
+  scrollbar-width:none;
+}
+.rail::-webkit-scrollbar{display:none}
+.rail a{
+  flex:0 0 auto;
+  min-width:44px;
+  min-height:44px;
+  text-align:center;
+  text-decoration:none;
+  color:var(--cream);
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.04em;
+  padding:6px 10px 8px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.rail a span{
+  display:block;
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin-bottom:1px;
+}
+.rail a:hover{color:#fff}
+
+/* —— FLIGHT BOOKENDS —— */
+.flights{
+  background:var(--deep);
+  color:var(--cream);
+  padding:6vh var(--pad-x) 7vh;
+  border-bottom:1px solid rgba(196,165,116,.18);
+  scroll-margin-top:64px;
+}
+.flights.departure{
+  border-bottom:none;
+  border-top:1px solid rgba(196,165,116,.18);
+}
+.flights-inner{
+  max-width:720px;
+  margin:0 auto;
+}
+.flights .kicker{
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 16px;
+}
+.flights h2{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(26px, 7vw, 40px);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  color:var(--cream);
+  margin:0 0 20px;
+}
+.flight-card{
+  border-top:1px solid rgba(196,165,116,.28);
+  padding-top:16px;
+}
+.flight-card .dir{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 10px;
+}
+.flight-card .route{
+  font-family:Fraunces,Georgia,serif;
+  font-size:clamp(17px, 4.5vw, 22px);
+  line-height:1.35;
+  color:var(--cream);
+  margin:0 0 12px;
+}
+.flight-card .legs{
+  margin:0;
+  padding:0;
+  list-style:none;
+  font-size:15px;
+  font-weight:300;
+  color:#d8cbb4;
+  line-height:1.55;
+}
+.flight-card .legs li{margin:0 0 4px}
+.flight-card .note{
+  margin:14px 0 0;
+  font-size:14px;
+  font-weight:300;
+  color:#a8987e;
+  line-height:1.5;
+}
+
+/* —— STAY BLOCK (mobile: copy above embed, single column) —— */
+.stay-block{
+  background:var(--paper);
+  color:var(--ink);
+  padding:0 0 2vh;
+}
+.stay-editorial{
+  padding:6vh var(--pad-x) 4vh;
+  scroll-margin-top:64px;
+  border-bottom:1px solid rgba(122,78,45,.14);
+}
+.stay-editorial-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+  align-items:start;
+}
+.stay-copy .stay-label{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--teak);
+  margin:0 0 12px;
+}
+.stay-copy h2{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(32px, 9vw, 64px);
+  line-height:1.02;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  margin:0 0 14px;
+}
+.stay-copy .nights{
+  font-size:15px;
+  color:var(--muted);
+  margin:0 0 16px;
+  max-width:36em;
+}
+.stay-copy .designer{
+  margin:0 0 14px;
+  max-width:38em;
+  font-size:17px;
+  line-height:1.65;
+}
+.stay-copy .designer:last-of-type{margin-bottom:0}
+.stay-embed{
+  justify-self:stretch;
+  width:100%;
+  max-width:450px;
+}
+.airbnb-embed-frame{
+  width:100%;
+  max-width:450px;
+  height:min(480px, 70vh);
+  margin:0;
+  border:1px solid rgba(122,78,45,.2);
+  border-radius:4px;
+  overflow:hidden;
+  background:#fff;
+}
+.airbnb-embed-frame a{
+  display:inline-block;
+  padding:14px 16px;
+  color:var(--teak);
+  font-size:14px;
+}
+
+/* Stay establishing still */
+.stay-establishing{
+  background:var(--deep);
+}
+.stay-establishing .still{
+  max-width:1180px;
+}
+
+/* —— NESTED DAYS (stack date + copy by default) —— */
+.nest{
+  max-width:980px;
+  margin:20px var(--pad-x) 28px;
+  padding:20px 16px 8px;
+  background:var(--nest);
+  border-radius:4px;
+  border-left:3px solid rgba(122,78,45,.35);
+  scroll-margin-top:72px;
+}
+.nest + .nest{margin-top:16px}
+.nest .spread{
+  max-width:none;
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  align-items:start;
+}
+.nest .date-col{padding-top:0}
+.nest .date-col .num{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(34px, 9vw, 44px);
+  line-height:.85;
+  letter-spacing:-.04em;
+  color:var(--ink);
+  display:block;
+}
+.nest .date-col .dow{
+  display:block;
+  margin-top:6px;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--teak);
+}
+.nest .day-kicker{
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--teak);
+  margin:4px 0 10px;
+}
+.nest h3{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(22px, 6vw, 32px);
+  line-height:1.12;
+  letter-spacing:-.02em;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+.nest p{
+  margin:0 0 12px;
+  max-width:38em;
+  font-size:16px;
+  line-height:1.62;
+}
+.nest p:last-child{margin-bottom:0}
+.nest a{color:var(--teak)}
+.nest a:hover{color:var(--ink)}
+.nest .rel{
+  color:var(--muted);
+  font-weight:300;
+  margin-top:14px;
+  font-size:15px;
+}
+.nest-stills{
+  background:var(--deep);
+  padding:8px 0 12px;
+}
+.nest-stills .still{
+  max-width:920px;
+}
+.nest-stills .band p.line{
+  font-size:clamp(15px, 4vw, 19px);
+}
+
+/* —— ZONE OPENERS —— */
+.zone{
+  background:var(--deep);
+}
+.zone .still{
+  max-width:1180px;
+}
+
+/* —— FRAMED STILLS: natural height, no landscape crop band —— */
+.frame-wrap{
+  background:var(--deep);
+  padding:0;
+}
+.still{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px var(--pad-x);
+}
+.still + .still{
+  padding-top:18px;
+}
+.frame{
+  position:relative;
+  overflow:hidden;
+  border-radius:3px;
+  background:#0a1210; /* letterbox OK for contain / short landscape */
+}
+.frame img{
+  width:100%;
+  height:auto;
+  max-height:85vh;
+  max-height:85svh;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin:0 auto;
+  aspect-ratio:auto;
+}
+.frame.frame-portrait img,
+.frame img[style*="object-position"]{
+  /* keep natural display; inline object-position only hints when cover used */
+  object-fit:contain;
+}
+.frame .band{
+  background:linear-gradient(180deg, #121c1a 0%, #0d1816 100%);
+  padding:18px 16px 22px;
+  border-top:1px solid rgba(196,165,116,.14);
+}
+.cap-place{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 10px;
+}
+.frame .band p.line{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(15px, 4vw, 21px);
+  line-height:1.45;
+  color:var(--cream);
+  margin:0 0 10px;
+  max-width:40em;
+}
+.frame .band p.line:last-child{margin-bottom:0}
+.frame .band p.prose{
+  font-family:Outfit,system-ui,sans-serif;
+  font-weight:300;
+  font-size:15px;
+  line-height:1.6;
+  color:#d4c4a8;
+  margin:0;
+  max-width:42em;
+}
+
+/* Leave / transition note on cream */
+.transit{
+  background:var(--paper);
+  color:var(--ink);
+  padding:4vh var(--pad-x) 5vh;
+}
+.transit-inner{
+  max-width:720px;
+  margin:0 auto;
+  border-top:1px solid rgba(122,78,45,.2);
+  padding-top:20px;
+}
+.transit .day-kicker{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--teak);
+  margin:0 0 10px;
+}
+.transit p{
+  margin:0;
+  max-width:38em;
+  font-size:16px;
+}
+
+.chapter-map{
+  background:var(--paper);
+  color:var(--ink);
+  padding:4vh var(--pad-x) 7vh;
+}
+.chapter-map .map{
+  max-width:920px;
+  margin:0 auto;
+}
+.chapter-map .map img{
+  width:100%;
+  height:auto;
+  border-radius:3px;
+}
+.chapter-map .map figcaption{
+  font-size:14px;
+  color:var(--muted);
+  margin:14px 0 0;
+  max-width:36em;
+}
+
+footer{
+  background:var(--deep);
+  color:#c9b99a;
+  padding:40px var(--pad-x) 64px;
+  font-size:14px;
+  line-height:1.55;
+}
+footer strong{color:var(--cream); font-weight:500}
+footer p{margin:0 0 8px}
+footer p:last-child{margin-bottom:0}
+
+/* —— FULL-PAGE ZONE HEROES (tall phone OK; no short landscape strip) —— */
+.zone-hero{
+  position:relative;
+  min-height:100svh;
+  min-height:100dvh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  scroll-margin-top:0;
+}
+.zone-hero img.bg{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.zone-hero .hero-scrim{
+  position:absolute; inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(8,14,13,.84) 0%, rgba(8,14,13,.55) 30%, rgba(8,14,13,.16) 55%, transparent 72%),
+    linear-gradient(180deg, transparent 20%, rgba(8,14,13,.22) 50%, rgba(8,14,13,.78) 80%, rgba(8,14,13,.96) 100%);
+}
+.zone-hero .copy{
+  position:relative;
+  z-index:2;
+  padding:0 var(--pad-x) 8vh;
+  max-width:38em;
+}
+.zone-hero .kicker{
+  font-size:11px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 14px;
+}
+.zone-hero h2{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;
+  font-size:clamp(34px, 10vw, 80px);
+  line-height:.98;
+  letter-spacing:-.03em;
+  color:var(--cream);
+  margin:0 0 16px;
+  text-shadow:0 2px 28px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4);
+}
+.zone-hero .lede{
+  font-weight:300;
+  font-size:clamp(15px, 4vw, 20px);
+  line-height:1.55;
+  color:#f0e6d4;
+  margin:0;
+  max-width:32em;
+  text-shadow:0 1px 16px rgba(0,0,0,.45);
+}
+
+/* —— Wider phones / tablets —— */
+@media (min-width:480px){
+  :root{ --pad-x:20px; }
+  body{font-size:17.5px}
+}
+
+/* —— Desktop progression (not the default) —— */
+@media (min-width:721px){
+  :root{ --pad-x:4.5vw; }
+  body{font-size:18px}
+  .hero .copy,
+  .zone-hero .copy{padding:0 8vw 10vh}
+  .stay-editorial{padding:9vh 7vw 5vh}
+  .flights{padding:7vh 7vw 8vh}
+  .nest{
+    margin:28px auto 36px;
+    padding:28px 28px 8px 32px;
+  }
+  .nest .spread{
+    grid-template-columns:88px minmax(0,1fr);
+    gap:6px 36px;
+  }
+  .still{
+    padding:40px max(4.5vw, calc((100vw - 1100px) / 2 + 28px));
+  }
+  .still + .still{padding-top:28px}
+  .stay-establishing .still,
+  .zone .still{
+    padding-left:max(4.5vw, calc((100vw - 1180px) / 2 + 28px));
+    padding-right:max(4.5vw, calc((100vw - 1180px) / 2 + 28px));
+  }
+  .nest-stills .still{
+    padding-left:max(4.5vw, calc((100vw - 920px) / 2 + 28px));
+    padding-right:max(4.5vw, calc((100vw - 920px) / 2 + 28px));
+  }
+  .frame{
+    box-shadow:0 12px 40px rgba(0,0,0,.35);
+  }
+  .frame .band{padding:24px 28px 28px}
+  .frame img{max-height:85vh}
+  .transit{padding:4vh 7vw 5vh}
+  .chapter-map{padding:4vh 7vw 8vh}
+  footer{padding:48px 8vw 72px; font-size:15px}
+}
+
+@media (min-width:961px){
+  .stay-editorial-inner{
+    grid-template-columns:minmax(0,1.15fr) minmax(280px,420px);
+    gap:40px 56px;
+  }
+  .stay-embed{justify-self:end}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <img class="bg" src="photos/catcha-ivans-cliffs.jpg" alt="">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">For Emily · 4–17 March 2027</p>
+    <h1>Thirteen nights<br>by the water.</h1>
+    <p class="lede">We land in Montego Bay. Then we live on the cliffs of Negril — limestone, thatch, ladders into water so clear you can see the fish from the table. Then Seven Mile Beach: pale sand, one of the great beaches in the world. Then four nights at Papaya Beach — private sand, height and ocean sunset, a quiet recovery north of the strip. Last night we dress up for dinner on the lagoon.</p>
+    <div class="meta">
+      <span>Just us</span>
+      <span>Quiet</span>
+      <span>Fish and vegetables</span>
+      <span>No tours</span>
+    </div>
+  </div>
+</header>
+
+<section class="flights" id="arrival" aria-label="Arrival">
+  <div class="flights-inner">
+    <p class="kicker">Arrival · Thursday 4 March</p>
+    <h2>How we get there.</h2>
+    <div class="flight-card">
+      <p class="dir">Outbound</p>
+      <p class="route">St. John’s → Toronto → Montego Bay</p>
+      <ul class="legs">
+        <li>Leave YYT at 5:00 in the morning</li>
+        <li>Connect in Toronto (YYZ)</li>
+        <li>Land MBJ at 12:35</li>
+      </ul>
+      <p class="note">A short taxi to the Hip Strip. Early afternoon — the balcony first.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="rail" aria-label="Days">
+  <a href="#arrival"><span>In</span>·</a>
+  <a href="#d4"><span>Thu</span>4</a>
+  <a href="#d5am"><span>Fri</span>5</a>
+  <a href="#d6"><span>Sat</span>6</a>
+  <a href="#d7"><span>Sun</span>7</a>
+  <a href="#d8"><span>Mon</span>8</a>
+  <a href="#d9"><span>Tue</span>9</a>
+  <a href="#d10"><span>Wed</span>10</a>
+  <a href="#d11"><span>Thu</span>11</a>
+  <a href="#d12"><span>Fri</span>12</a>
+  <a href="#d13"><span>Sat</span>13</a>
+  <a href="#d14"><span>Sun</span>14</a>
+  <a href="#d15"><span>Mon</span>15</a>
+  <a href="#d16"><span>Tue</span>16</a>
+  <a href="#d17"><span>Wed</span>17</a>
+  <a href="#departure"><span>Out</span>·</a>
+</nav>
+
+<!-- ZONE: Montego Bay -->
+<section class="zone-hero" id="zone-mobay" aria-label="Montego Bay">
+  <img class="bg" src="photos/zone-montego-bay.jpg" alt="Montego Bay coastline: turquoise water, sand, and resort shore">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Montego Bay</p>
+    <h2>The bay<br>we land into.</h2>
+    <p class="lede">Hip Strip light, Doctor’s Cave as a pale ribbon of sand, the Caribbean already in the room. One night high above the water — then west.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 1: Ocean View Penthouse ========== -->
+<article class="stay-block" id="stay-penthouse">
+
+  <header class="stay-editorial" id="s1">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay one · Montego Bay</p>
+        <h2>Ocean View Penthouse</h2>
+        <p class="nights">Hip Strip · Thursday night, Friday morning · A top-floor stay across from Doctor’s Cave.</p>
+        <p class="designer">A king suite with a private balcony that opens onto the bay: woven swing chair, glass-top table, the Hip Strip thinned to palms and turquoise. Inside — tufted leather headboard, teal accents, pendant lights, sliding doors that keep the sea in the room.</p>
+        <p class="designer">Closest stay to the airport. We arrive, we stand on the balcony, we walk to dinner on Gloucester.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="46616408" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/46616408?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/ocean-view-penthouse-balcony.jpg" alt="Penthouse balcony over Doctor’s Cave and the Caribbean" style="object-position:center 40%">
+        <figcaption class="band">
+          <p class="cap-place">Ocean View Penthouse · the balcony</p>
+          <p class="line">Private terrace above the Hip Strip — Doctor’s Cave as a pale ribbon, boats on turquoise water.</p>
+          <p class="prose">This is the first thing we see when we open the door: high enough that the Strip softens, close enough that the Caribbean fills the afternoon. One night here before we go west. The balcony is where the trip begins.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+
+  <section class="nest" id="d4">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">4</span>
+        <span class="dow">Thu</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Afternoon · arrive &amp; settle</p>
+        <h3>We land at lunch.</h3>
+        <p>Out of St. John’s before dawn, through Toronto, into Montego Bay at 12:35. A taxi brings us to the Hip Strip early afternoon. Then the balcony — the same view you already saw above — and soft hours before dinner.</p>
+        <p class="rel">We do not swim yet. That is tomorrow morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nest" id="d4eve">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">4</span>
+        <span class="dow">Thu</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Evening · Gloucester Avenue</p>
+        <h3>Dinner by the water.</h3>
+        <p><a href="https://www.margueritesjamaica.com/">Marguerites</a> is a short walk from the Penthouse — white linen, dark woven chairs, the sea at the edge of the table. Arrival night. Seafood. Soft light.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Inside the suite: wood, teal, and the same sliding doors that keep the bay in the room overnight.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/ocean-view-penthouse-bedroom.jpg" alt="Penthouse bedroom opening to the balcony and sea" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Inside the Penthouse</p>
+        <p class="line">Tufted leather, woven pendants, teal throw — the balcony and Doctor’s Cave beyond the glass.</p>
+        <p class="prose">The bedroom faces the water on purpose. White linens, a wooden frame, doors that become the whole afternoon. We sleep here once, then turn west.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Then dinner at Marguerites — seafood on Gloucester, white linen, the water right there.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/marguerites-terrace.jpg" alt="Marguerites terrace, white linen at the sea" style="object-position:center 55%">
+      <figcaption class="band">
+        <p class="cap-place">Marguerites · arrival night</p>
+        <p class="line">White linen, dark woven chairs, limewash, the sea at the edge of the table.</p>
+        <p class="prose">A walk from the Penthouse. Golden hour on the terrace. First proper table of the trip — seafood, soft light, the bay we flew into still holding the day.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<!-- Fri 5 morning: Doctor’s Cave + Pelican -->
+<article class="stay-block">
+  <section class="nest" id="d5am">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">5</span>
+        <span class="dow">Fri</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Morning · before we leave the bay</p>
+        <h3>Swim, then west.</h3>
+        <p>Morning at <a href="https://doctorscavebathingclub.com/doctors-cave-beach-facilities/">Doctor’s Cave</a> — the beach we watched from above yesterday, now at water level. White sand, pale turquoise, a club on the Hip Strip. Then lunch at Pelican Grill, a few minutes up Gloucester: a welcome first proper meal before the island opens west.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/doctors-cave.jpg" alt="Doctor’s Cave Beach, Montego Bay" style="object-position:center 62%">
+      <figcaption class="band">
+        <p class="cap-place">Doctor’s Cave Beach</p>
+        <p class="line">Montego Bay’s famous swimming beach — white sand, pale water, palms along the Hip Strip.</p>
+        <p class="prose">Yesterday we looked down on this coast from the balcony. This morning we walk into it. The water is the colour people mean when they say Caribbean. We swim, we dry in the sun, then Pelican for lunch before the taxi turns inland toward Negril.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Pelican Grill on Gloucester — coral facade, Bahama shutters, a Montego Bay classic since before we were born.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/pelican-grill-mobay.jpg" alt="The Pelican Grill exterior on Gloucester Avenue" style="object-position:center 40%">
+      <figcaption class="band">
+        <p class="cap-place">Pelican Grill</p>
+        <p class="line">Coral-orange arches, green awnings, the Hip Strip diner we will come back to on the last morning.</p>
+        <p class="prose">Lunch after the swim. A few minutes up Gloucester from Doctor’s Cave. We eat well, then the taxi turns inland — about two hours to the West End cliffs.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit" id="leave-west">
+  <div class="transit-inner">
+    <p class="day-kicker">Friday afternoon</p>
+    <p>Private taxi across the island — about two hours. The road climbs, then drops toward the West End cliffs. We are not on the sand yet. We are going to live on limestone.</p>
+  </div>
+</section>
+
+<!-- ZONE: West End cliffs -->
+<section class="zone-hero" id="zone-west-end" aria-label="Negril West End">
+  <img class="bg" src="photos/zone-west-end.jpg" alt="West End limestone cliffs, thatch, and turquoise cove">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Negril West End</p>
+    <h2>Limestone,<br>thatch, ladders.</h2>
+    <p class="lede">Circular roofs, stone stairs, water so clear the ladders look painted on. Five nights on this edge: first Little Bird, then Splashrock deeper toward the lighthouse.</p>
+  </div>
+</section>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Five nights on this edge begin at Little Bird — the first cottage that is ours.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 2: Little Bird ========== -->
+<article class="stay-block" id="stay-little-bird">
+    <header class="stay-editorial" id="s2">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay two · West End cliffs</p>
+        <h2>Little Bird Cottage</h2>
+        <p class="nights">High Cove · Friday afternoon through Saturday · Wooden louvers, thatch, a private limestone cove.</p>
+        <p class="designer">Designed for the breeze: louvers instead of glass, teak and stone underfoot, a thatch pavilion in cobalt that faces the open Caribbean. The architecture is the climate — shade, air, and a stair that ends in turquoise.</p>
+        <p class="designer">We cook Friday night. Saturday we walk the same road to lunch in a cave. Sunset on our own deck — not the circus down the road.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="15821562" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/15821562?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/little-bird-cottage-exterior.jpg" alt="Little Bird Cottage on the West End cliffs" style="object-position:center 45%">
+        <figcaption class="band">
+          <p class="cap-place">Little Bird Cottage</p>
+          <p class="line">Periwinkle clapboard, turquoise louvers, thatch pavilion, a shaded sea-cave under the rock.</p>
+          <p class="prose">High Cove, further along the cliffs than town. Two storeys of wood and limestone, a cobalt thatch cabana, and under the house a private cove you reach by ladder. This is the first cottage that is ours — not a hotel facade, not a neighbour’s view. Little Bird, by name, only now.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <section class="nest" id="d5">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">5</span>
+        <span class="dow">Fri</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Night · arrive at High Cove</p>
+        <h3>Ladder, cove, cook.</h3>
+        <p>We arrive at Little Bird as the light softens. Wooden louvers, the cobalt thatch, the ladder into the limestone cove under the house. Further along the cliffs than town. Dinner at home — fish if we find it, vegetables, the sound of water under the rock.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/little-bird-cove-ladder.jpg" alt="Ladder into the cove at Little Bird" style="object-position:center 72%">
+      <figcaption class="band">
+        <p class="cap-place">The cove under Little Bird</p>
+        <p class="line">Limewashed stone into private turquoise — a blue swim ladder under a limestone overhang.</p>
+        <p class="prose">You leave the cottage by a stair that feels carved for one person at a time. The water waits in a pocket of rock. This is Friday night’s swimming hole and Saturday morning’s first plunge — ours for two tides.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Above the cove, the cobalt thatch pavilion is where the day gathers — coffee, a book, the late light.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/little-bird-thatch-pavilion.jpg" alt="Cobalt thatch pavilion at Little Bird" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Thatch pavilion</p>
+        <p class="line">Cobalt thatch, hammocks, wicker — the outdoor room that faces the open sea.</p>
+        <p class="prose">Loungers and shade on limestone. The pavilion is where the day gathers: coffee, a book, the late light. Under the rock the cove keeps its own cooler air.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d6">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">6</span>
+        <span class="dow">Sat</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Still at Little Bird</p>
+        <h3>Lunch in a cave.</h3>
+        <p>Xtabi sits on the same road, a little further toward the point. White thatch, turquoise rails, rooms of rock with the sea coming in. We eat there. Walk the caves.</p>
+        <p class="rel">Dinner we cook. Sunset on our deck — quiet, our own light, not Rick’s circus.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/xtabi.jpg" alt="Xtabi on the West End cliffs" style="object-position:center 40%">
+      <figcaption class="band">
+        <p class="cap-place">Xtabi</p>
+        <p class="line">A restaurant built into the cliffs — caves, thatch, the sea coming in under your feet.</p>
+        <p class="prose">From above it looks almost impossible: turquoise pavilion, stone stairs, clear water over rock. Down in the caves the Caribbean pushes through limestone rooms. Lunch here is the West End in one sitting.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Down in the caves the Caribbean pushes through limestone rooms — cool shade after the cliff-top light.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/xtabi-cave.jpg" alt="Cave at Xtabi" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Inside the caves</p>
+        <p class="line">Rock chambers where the sea enters — cool shade after the cliff-top light.</p>
+        <p class="prose">You walk down into stone. The water is louder here, closer. Xtabi’s caves are the reason people linger after the plates are cleared.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Saturday night we sleep at Little Bird one last time — teak, mosquito net, louvers open to the sea air.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/little-bird-bedroom.jpg" alt="Little Bird bedroom with louvers" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Inside Little Bird</p>
+        <p class="line">Four-poster teak, mosquito net, sunburst planks, louvers open to the sea air.</p>
+        <p class="prose">The bedroom is the cottage’s quiet heart: wood overhead in a burst pattern, stone mosaic underfoot, doors that become windows when the breeze asks. Saturday night we sleep here one last time before Splashrock.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Sunday we move further west toward the lighthouse — same coast, quieter at night.</p>
+  </div>
+</section>
+
+<!-- ZONE: Deep West -->
+<section class="zone-hero" id="zone-deep-west" aria-label="Deep West End">
+  <img class="bg" src="photos/zone-deep-west.jpg" alt="Limestone ledge and swim ladder into the Caribbean on the Deep West End">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Deep West</p>
+    <h2>Rock pools<br>&amp; ladders.</h2>
+    <p class="lede">Further from town, toward the lighthouse. Louvers, a king bed, a bar that opens onto water. Three nights living between the bed, the bar, and the drop into turquoise.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 3: Splashrock ========== -->
+<article class="stay-block" id="stay-splashrock">
+    <header class="stay-editorial" id="s3">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay three · Deeper West End</p>
+        <h2>Splashrock</h2>
+        <p class="nights">Sunday, Monday, Tuesday · Three nights on the cliff edge — louvers, a king bed, a bar that opens onto the water.</p>
+        <p class="designer">Warm wood walls, full-height louvers, a bar built like a boat cabin that faces open sea. Live between the bed, the bar, and the ladders. Same coast as Little Bird, further from town, quieter at night.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="1160765954674143596" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1160765954674143596?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/splashrock-ocean-bar.jpg" alt="Splashrock bar opening onto the Caribbean" style="object-position:center 50%">
+        <figcaption class="band">
+          <p class="cap-place">Splashrock</p>
+          <p class="line">An indoor-outdoor wood bar with shutter-awnings propped open — a straight line of sight to the Caribbean.</p>
+          <p class="prose">Deeper on the same cliffs, toward the lighthouse. Louvers, a king bed, a bar that becomes a porch when the shutters lift, ladders into caves below. Three nights. The water is the neighbour.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <section class="nest" id="d7">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">7</span>
+        <span class="dow">Sun</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Move further west</p>
+        <h3>Deeper on the same cliffs.</h3>
+        <p>A short hop toward the lighthouse. Splashrock waits with louvers and ladders. Lunch at Just Natural on the way — a garden place, vegetables and shade — then settle into the bar that opens onto the water. Lighthouse optional if the afternoon wants height.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Just Natural — thatched garden path, hand-painted signs, a lunch tucked into the greenery near the lighthouse road.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/just-natural-negril.jpg" alt="Entrance to Just Natural restaurant in a tropical garden" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Just Natural</p>
+        <p class="line">Garden seating under thatch — vegetables, seafood, Ital, and shade before we settle into Splashrock.</p>
+        <p class="prose">Sunday’s lunch on the way. You order, you wander the plants, they find you when the plates are ready. Then home to the bar that opens onto the water.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/splashrock-king-room.jpg" alt="Splashrock king bedroom" style="object-position:center 48%">
+      <figcaption class="band">
+        <p class="cap-place">King room</p>
+        <p class="line">Warm wood, full-height louvers, a navy runner — the cliffs under the windows.</p>
+        <p class="prose">The bedroom is all timber and air. Louvers instead of heavy glass. You wake to the same sound that put you to sleep: water working the limestone below.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Sunday’s arrival ritual: drop in from the house — metal ladder, turquoise at the rock.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/splashrock-cliff-ladder.jpg" alt="Cliff ladder into turquoise water at Splashrock" style="object-position:center 55%">
+      <figcaption class="band">
+        <p class="cap-place">Ladders at Splashrock</p>
+        <p class="line">Metal swim ladder bolted to West End limestone — turquoise at the rock.</p>
+        <p class="prose">Sunday’s arrival ritual: drop in from the house. The water here is the reason the bar faces the sea. Three nights of this ladder whenever the heat asks.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d8">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">8</span>
+        <span class="dow">Mon</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Still at Splashrock</p>
+        <h3>A jump, then dinner.</h3>
+        <p><a href="https://www.rickscafejamaica.com/">Rick’s</a> is a few minutes back toward town. People jump off a wooden platform into deep water. We go between two and four, while you can still swim and jump. By sunset the tour buses arrive and it becomes a crowd watching the sun. We don’t stay for that.</p>
+        <p>Dinner is at <a href="https://www.rockhouse.com/eat/">Rockhouse</a>. Stone cottages, conical thatch, steps carved into the rock. We are diners, not guests.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/ricks-cafe.jpg" alt="Rick’s Café cliff jump" style="object-position:center 55%">
+      <figcaption class="band">
+        <p class="cap-place">Rick’s Café</p>
+        <p class="line">The famous cliff jump — we go at two, jump, and leave before the sunset crowd.</p>
+        <p class="prose">Two to four is the window: water still swimmable, platforms still for jumping, the buses not yet parked for the spectacle. We are here for the leap and the cool water, not the applause at dusk.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Dinner is at Rockhouse — stone cottages, conical thatch, steps carved into the rock. We are diners, not guests.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/rockhouse.jpg" alt="Rockhouse cliff cottage with thatch and red ladder" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Rockhouse</p>
+        <p class="line">Conical thatch, limestone, teak openings, a red ladder into the sea — dinner on these cliffs tonight.</p>
+        <p class="prose">We are not sleeping in the cottages. We are eating at the restaurant that hangs over the same rock. Stone, thatch, and a path that feels like it was cut for lanterns.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>The restaurant hangs over the same rock — thatch dining, limestone arches, the Caribbean as the fourth wall.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/rockhouse-restaurant-cliffs.jpg" alt="Rockhouse Restaurant on the limestone cliffs" style="object-position:center 55%">
+      <figcaption class="band">
+        <p class="cap-place">Rockhouse Restaurant</p>
+        <p class="line">Thatch dining roof, limestone arches, a table at the water, string lights at dusk.</p>
+        <p class="prose">Stacked on the cliffs after Rick’s. Private water-level tables if we are lucky; otherwise under thatch with the Caribbean as the fourth wall. Monday’s best hour.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d9">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">9</span>
+        <span class="dow">Tue</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Last full day on the rocks</p>
+        <h3>A morning loop along West End Road.</h3>
+        <p>Optional and light: taxi from Splashrock along the cliffs to <strong>Joseph’s Cave</strong> — a limestone cave under the rock near Rockhouse. You swim in, and there is an optional jump if you want it. Then <strong>Barney’s Flower &amp; Hummingbird Garden</strong>, where hummingbirds take sugar water from your hand. Back to Splashrock by midday.</p>
+        <p>Afternoon: ladders, or the hammock until the light goes gold. Evening: cook at home, or walk to Ivan’s at <a href="https://catchajamaica.com/">Catcha Falling Star</a> if Tuesday wants a table that isn’t our kitchen — adults-only cliffs, thatch overhead, sea underneath.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/the-caves.jpg" alt="West End limestone caves and thatch" style="object-position:center 48%">
+      <figcaption class="band">
+        <p class="cap-place">Joseph’s Cave · West End limestone</p>
+        <p class="line">Limestone water under the cliffs — swim in, optional jump, then on to Barney’s.</p>
+        <p class="prose">Tuesday morning’s first stop if we take the loop. Clear water, a mouth of stone, the choice to leap or simply float. Then the garden for hummingbirds, and home to Splashrock before the heat peaks.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Evening option: walk to Ivan’s at Catcha Falling Star — thatch overhead, sea underneath, no circus. Or cook.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/catcha-pool-thatch.jpg" alt="Ivan’s at Catcha Falling Star, pool and thatch" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Ivan’s at Catcha Falling Star</p>
+        <p class="line">Optional cliff dinner — peach arches, limestone deck, thatch pavilions, bougainvillea.</p>
+        <p class="prose">Next to Tensing Pen. Quiet because they don’t take children. If Tuesday evening wants a table that isn’t our own kitchen, Ivan’s is the walk: thatch overhead, sea underneath, no circus.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>We leave the cliffs. The coast opens into Long Bay — pale sand, shallow kind water, two nights on the beach.</p>
+  </div>
+</section>
+
+<!-- ZONE: Seven Mile -->
+<section class="zone-hero" id="zone-seven-mile" aria-label="Seven Mile Beach">
+  <img class="bg" src="photos/zone-seven-mile.jpg" alt="Seven Mile Beach and Long Bay at sunset">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Seven Mile Beach</p>
+    <h2>Long Bay.<br>Pale sand.</h2>
+    <p class="lede">Seven miles of pale sand and a long, calm bay — one of the great beaches in the world. After five nights of limestone, the body understands sand again. Two nights sleeping on this shore.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 4: Beachfront Suite ========== -->
+<article class="stay-block" id="stay-beachfront">
+    <header class="stay-editorial" id="s4">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay four · Seven Mile Beach</p>
+        <h2>Beachfront Suite</h2>
+        <p class="nights">Wednesday and Thursday · Two nights on the sand at Jamwest, about halfway along Seven Mile Beach.</p>
+        <p class="designer">A private king suite with a navy sofa, a kitchenette, and glass that looks straight at the bay. Modern, calm, designed for bare feet. Sliding doors to palms and turquoise.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="1337960652423108627" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1337960652423108627?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/beachfront-seven-mile.jpg" alt="Sea-grape shade and lounge chairs on Seven Mile Beach" style="object-position:center 50%">
+        <figcaption class="band">
+          <p class="cap-place">Beachfront Suite · outside the room</p>
+          <p class="line">Sea-grape shade, lounge chairs, a wooden beach-club deck — the water a few steps away.</p>
+          <p class="prose">Halfway along Seven Mile at Jamwest. Sliding doors open to palms and turquoise. After five nights of limestone, the body understands sand again. This is the soft middle of the trip.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <section class="nest" id="d10">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">10</span>
+        <span class="dow">Wed</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Onto the sand</p>
+        <h3>We sleep on the sand.</h3>
+        <p>Out of Splashrock at noon. A local taxi up the West End and onto Seven Mile Beach. Beachfront Suite waits with sliding doors to palms and turquoise water.</p>
+        <p class="rel">Lunch at Rasta Ade on the way. Dinner at Miss Lily’s at Skylark — early seating keeps the beachside calm.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Rasta Ade on Norman Manley — ital plates, painted tables, feet in the sand of Seven Mile.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/rasta-ade-negril.jpg" alt="Lunch at Rasta Ade on Seven Mile Beach" style="object-position:center 55%">
+      <figcaption class="band">
+        <p class="cap-place">Rasta Ade</p>
+        <p class="line">Vegan Ital on the beach — painted table, turquoise water, a plate that looks like the island.</p>
+        <p class="prose">Wednesday’s lunch on the way to Beachfront. Natural food, juice, the sand under the chairs. Then we settle into the suite with the bay as the living room.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/beachfront-king-suite.jpg" alt="Beachfront Suite king room looking to the water" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Beachfront Suite</p>
+        <p class="line">The bed looks at the water — navy sofa, kitchenette, palms beyond the glass.</p>
+        <p class="prose">Two nights. Morning light fills the room before you stand up. Everything points at the bay — calm, modern, barefoot.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Wednesday evening: Miss Lily’s at Skylark — beachside, album covers, the sea through the louvers. Early seating if we want it quieter.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/miss-lilys-negril.jpg" alt="Miss Lily’s at Skylark, Negril beachside dining" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Miss Lily’s · Skylark</p>
+        <p class="line">Vaulted wood, reggae murals, navy banquettes — Seven Mile turquoise through the louvers.</p>
+        <p class="prose">Mid–Seven Mile at Skylark. Jerk smokehouse and seafood, beachside. We take an earlier table: the light still soft, the sand still pale, the music not yet a party.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d11">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">11</span>
+        <span class="dow">Thu</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Still on Seven Mile Beach</p>
+        <h3>Feet in the sand for lunch.</h3>
+        <p>Walk the waterline. Swim until the light goes gold. Lunch at Cosmo’s — thatched seafood shack, picnic tables on the sand, stew fish and conch. Dinner we cook.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Cosmo’s at Long Bay Beach Park — vaulted timber, picnic tables, the Caribbean a few steps from your feet.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/cosmos-negril.jpg" alt="Cosmo’s seafood restaurant open to Seven Mile Beach" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Cosmo’s</p>
+        <p class="line">Open-air timber and picnic tables — feet-in-sand seafood on Seven Mile since the seventies.</p>
+        <p class="prose">Thursday’s lunch. Stew fish, conch, festival. Locals and travellers at the same long tables. Then home to cook, and the last light on Long Bay.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/seven-mile-sunset.jpg" alt="Sunset on Seven Mile Beach" style="object-position:center 60%">
+      <figcaption class="band">
+        <p class="cap-place">Seven Mile Beach, evening</p>
+        <p class="line">The same sand, chairs and a swing, the sun going into the water.</p>
+        <p class="prose">Thursday’s last light on Long Bay. No agenda except the colour of the sky and the sound of small waves. Tomorrow we turn north for private sand.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Tomorrow the coast softens into Papaya Beach — private sand, gardens, four nights of deliberate quiet.</p>
+  </div>
+</section>
+
+<!-- ZONE: Papaya / Green Island -->
+<section class="zone-hero" id="zone-papaya" aria-label="Papaya Beach Green Island">
+  <img class="bg" src="photos/zone-papaya.jpg" alt="Quiet tropical shoreline at morning light">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Papaya Beach</p>
+    <h2>Private sand.<br>Recovery.</h2>
+    <p class="lede">North of Negril at Green Island — Coconut Studio at Papaya Beach. Elevated ocean-sunset light, a vaulted wood studio, private sand below. Four nights of rest. We cook. We do not chase waterfalls.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 5: Coconut Studio ========== -->
+<article class="stay-block" id="stay-coconut">
+    <header class="stay-editorial" id="s5">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay five · Papaya Beach</p>
+        <h2>Coconut Studio</h2>
+        <p class="nights">Friday through Monday · Four nights at Papaya Beach, Green Island — vaulted wood, balcony to the sunset, private sand.</p>
+        <p class="designer">A studio with a soaring plank ceiling, leaf-blade fan, and sliding doors that open onto a wooden balcony over the water. Queen bed, kitchenette, loft above. Outside: gardens, a saltwater pool, and a crescent of private sand that belongs to the place.</p>
+        <p class="designer">This is the quiet after the cliffs and the mile. We stay put on purpose.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="1328379786557452951" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1328379786557452951?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/coconut-studio-sunset.jpg" alt="Sunset ocean view from Coconut Studio balcony" style="object-position:center 45%">
+        <figcaption class="band">
+          <p class="cap-place">Coconut Studio · from the balcony</p>
+          <p class="line">Elevated wood deck, the sun on the water, a path of gold across the Caribbean.</p>
+          <p class="prose">Papaya Beach at Green Island — north of the classic strip, quieter by design. The studio faces the sunset. Four evenings of this light if we want them. The recovery stay begins here.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <section class="nest" id="d12">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">12</span>
+        <span class="dow">Fri</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Arrive at Papaya</p>
+        <h3>Private sand and a high room.</h3>
+        <p>After Seven Mile, a short taxi north to Green Island. Coconut Studio opens onto height and ocean. Private sand below. We cook. We settle in.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Inside: vaulted wood, leaf-blade fan, a studio made for long light and the balcony beyond.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/coconut-studio-interior.jpg" alt="Coconut Studio vaulted interior opening to sunset balcony" style="object-position:center 40%">
+      <figcaption class="band">
+        <p class="cap-place">Inside Coconut Studio</p>
+        <p class="line">Soaring plank ceiling, queen bed, wooden table — sliding doors open to the sunset balcony.</p>
+        <p class="prose">The room is the stay: warm timber overhead, white walls, a plant in the corner, doors that become the whole western sky. Kitchenette for the cooking nights. Loft above if we want a second perch.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d13">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">13</span>
+        <span class="dow">Sat</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Recovery after cliffs and sand</p>
+        <h3>Nothing is booked on purpose.</h3>
+        <p>Cook breakfast. Private sand. Pool if we want still water. Watch the sun go into the Caribbean from the balcony. No tours. No waterfall day. This is the quiet after the cliffs and the mile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nest" id="d14">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">14</span>
+        <span class="dow">Sun</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Stay put</p>
+        <h3>Same sand, same light.</h3>
+        <p>Same rhythm: private beach, balcony, cook when we want. The grounds are the outing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nest" id="d15">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">15</span>
+        <span class="dow">Mon</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Last full day at Papaya</p>
+        <h3>The same water, one more time.</h3>
+        <p>Sand. Pool. Balcony light. Pack lightly in the evening — tomorrow we go back to the bay.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>The private sand below the studio — a crescent of pale shore, clear shallows, foliage to the edge.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/coconut-studio-sand.jpg" alt="Private sand at Papaya Beach" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Papaya Beach · private sand</p>
+        <p class="line">A quiet crescent of shore — turquoise shallows, green canopy, no strip energy.</p>
+        <p class="prose">Four days of this if we want them. Soft sand, clear water, fishing jetties nearby. We do not leave for waterfalls. The recovery is the sand and the room above it.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Tuesday we go back to the bay — up the hill this time, one night at Vera before the plane.</p>
+  </div>
+</section>
+
+<!-- ZONE: Back to Montego Bay -->
+<section class="zone-hero" id="zone-mobay-return" aria-label="Back to Montego Bay">
+  <img class="bg" src="photos/zone-montego-return.jpg" alt="Aerial Caribbean coastline on the return toward Montego Bay">
+  <div class="hero-scrim"></div>
+  <div class="copy">
+    <p class="kicker">Chapter · Back to the bay</p>
+    <h2>Harbour light.<br>Last night.</h2>
+    <p class="lede">Up the hill above downtown — white rooms, a balcony over harbour and sea. Afternoon in the square. Dinner floating on Bogue Lagoon.</p>
+  </div>
+</section>
+
+<!-- ========== STAY 6: Vera ========== -->
+<article class="stay-block" id="stay-vera">
+    <header class="stay-editorial" id="s6">
+    <div class="stay-editorial-inner">
+      <div class="stay-copy">
+        <p class="stay-label">Stay six · Back to the bay</p>
+        <h2>Vera</h2>
+        <p class="nights">Tuesday night, Wednesday morning · A modern king apartment up the hill — white rooms, mustard pillow, balcony over the harbour.</p>
+        <p class="designer">Clean lines, white walls, a living room that becomes outdoor dining when the doors slide open. Designed for the last night: dress up, go into town, come home to the harbour lights.</p>
+      </div>
+      <div class="stay-embed">
+        <div class="airbnb-embed-frame" data-id="729526968411462690" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/729526968411462690?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stay-establishing frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/vera-living-to-sea.jpg" alt="Vera living room opening to the harbour" style="object-position:center 50%">
+        <figcaption class="band">
+          <p class="cap-place">Vera</p>
+          <p class="line">Bright living room, sliding door open to a harbour balcony — white outdoor dining above the bay.</p>
+          <p class="prose">Back to Montego Bay, this time up the hill. White rooms, a mustard pillow, modern and calm. One night. The balcony looks over the harbour and the sea — a different height than the Penthouse, a different goodbye.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <section class="nest" id="d16">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">16</span>
+        <span class="dow">Tue</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Last night</p>
+        <h3>A last table on the lagoon.</h3>
+        <p>Private taxi in the late morning, back to the bay, this time up the hill. Afternoon: Sam Sharpe Square and the National Gallery West. Dinner at <a href="https://thehouseboatgrill.com/">HouseBoat Grill</a> — a floating restaurant on Bogue Lagoon. Taxi from Vera. The last-night table.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/sam-sharpe-square.jpg" alt="Sam Sharpe Square, Montego Bay" style="object-position:center 45%">
+      <figcaption class="band">
+        <p class="cap-place">Sam Sharpe Square</p>
+        <p class="line">Bronze monument, The Cage in limestone and brick, colonial facades — afternoon in town before dinner.</p>
+        <p class="prose">We walk the square and the National Gallery West while the light is still high. History underfoot, then home to Vera to change for the last table on the water.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>Then dinner at HouseBoat Grill — a converted boat on Bogue Lagoon, green trim, lights on still water.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/houseboat-grill-floating.jpg" alt="HouseBoat Grill on Bogue Lagoon at dusk">
+      <figcaption class="band">
+        <p class="cap-place">HouseBoat Grill · last night</p>
+        <p class="line">A restaurant on a boat, lights on still water, green trim against the dusk.</p>
+        <p class="prose">You take a short ride out onto Bogue Lagoon and step aboard. Two decks, soft light, the water barely moving. Last-night seafood — the closing scene after cliffs, sand, and Papaya.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>We ask for upstairs when we can — teak, louvers, quieter and closer to the night air.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/houseboat-grill-interior.jpg" alt="Teak dining room at HouseBoat Grill">
+      <figcaption class="band">
+        <p class="cap-place">Upstairs at the HouseBoat</p>
+        <p class="line">Teak, louvers, red cloths, a bottle-lined bar — dinner indoors if the air turns cool.</p>
+        <p class="prose">Shutters open to the lagoon. Napkins in yellow, wood warm under the lamps. We ask for upstairs when we can: quieter, closer to the night air, fish somewhere under the hull.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<section class="transit">
+  <div class="transit-inner">
+    <p>We come back up the hill to Vera — quiet white bedroom, the harbour still out there in the dark.</p>
+  </div>
+</section>
+
+<div class="nest-stills frame-wrap">
+  <figure class="still">
+    <div class="frame">
+      <img src="photos/vera-bedroom.jpg" alt="Vera bedroom" style="object-position:center 50%">
+      <figcaption class="band">
+        <p class="cap-place">Vera · the room</p>
+        <p class="line">Quiet white bedroom after HouseBoat — the harbour still out there in the dark.</p>
+        <p class="prose">We come back up the hill. Tomorrow is Pelican and the plane. Tonight is only the room and the knowledge that thirteen nights are almost complete.</p>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+
+<article class="stay-block">
+  <section class="nest" id="d17">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">17</span>
+        <span class="dow">Wed</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Home</p>
+        <h3>Brunch, then the plane.</h3>
+        <p>Pelican Grill on Gloucester — a welcome return to the same lunch we loved before we went west. Taxi at 10:15 for the afternoon flight.</p>
+      </div>
+    </div>
+  </section>
+</article>
+
+<section class="chapter-map">
+  <figure class="map">
+    <img src="photos/map-jamaica-west.png" alt="West Jamaica: Montego Bay, the West End cliffs, Seven Mile Beach, Papaya Beach, and back">
+    <figcaption>Bay, cliffs, sand, Papaya, bay. That is the whole shape.</figcaption>
+  </figure>
+</section>
+
+<section class="flights departure" id="departure" aria-label="Departure">
+  <div class="flights-inner">
+    <p class="kicker">Departure · Wednesday 17 March</p>
+    <h2>How we come home.</h2>
+    <div class="flight-card">
+      <p class="dir">Homeward</p>
+      <p class="route">Montego Bay → Montreal → St. John’s</p>
+      <ul class="legs">
+        <li>Taxi from Vera at 10:15</li>
+        <li>Leave MBJ at 13:20</li>
+        <li>Connect in Montreal (YUL)</li>
+        <li>Land YYT at 00:46 Thursday morning</li>
+      </ul>
+      <p class="note">Pelican first. Then the airport. Home before dawn the next day.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Emily + Chad</strong> · 4–17 March 2027 · Jamaica</p>
+  <p>Lodging is booked. Restaurants are the plan — nothing reserved yet on purpose. Vera is the preferred last night.</p>
+</footer>
+
+</body>
+</html>
