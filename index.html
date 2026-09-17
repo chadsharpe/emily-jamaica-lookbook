@@ -300,7 +300,7 @@ img{display:block; max-width:100%}
 
 /* Stay establishing still */
 .stay-establishing{
-  background:#d9cfc0;
+  background:#15221f;
   padding:12px 0 16px;
 }
 .stay-establishing .still{
@@ -313,6 +313,7 @@ img{display:block; max-width:100%}
   margin:20px var(--pad-x) 28px;
   padding:20px 16px 8px;
   background:var(--nest);
+  color:var(--ink);
   border-radius:4px;
   border-left:3px solid rgba(122,78,45,.35);
   scroll-margin-top:72px;
@@ -367,6 +368,7 @@ img{display:block; max-width:100%}
   max-width:38em;
   font-size:16px;
   line-height:1.62;
+  color:var(--ink);
 }
 .nest p:last-child{margin-bottom:0}
 .nest a{color:var(--teak)}
@@ -378,7 +380,7 @@ img{display:block; max-width:100%}
   font-size:15px;
 }
 .nest-stills{
-  background:#d9cfc0;
+  background:#15221f;
   padding:12px 0 16px;
 }
 .nest-stills .still{
@@ -398,7 +400,7 @@ img{display:block; max-width:100%}
 
 /* —— FRAMED STILLS: natural height, no landscape crop band —— */
 .frame-wrap{
-  background:#d9cfc0;
+  background:#15221f;
   padding:12px 0 16px;
 }
 .still{
@@ -434,9 +436,9 @@ img{display:block; max-width:100%}
   object-fit:contain;
 }
 .frame .band{
-  background:linear-gradient(180deg, #2c3834 0%, #24302c 100%);
+  background:linear-gradient(180deg, #3f4f4a 0%, #354540 100%);
   padding:18px 16px 22px;
-  border-top:1px solid rgba(196,165,116,.22);
+  border-top:1px solid rgba(196,165,116,.28);
 }
 .cap-place{
   font-size:11px;
@@ -547,6 +549,24 @@ footer p:last-child{margin-bottom:0}
     linear-gradient(90deg, rgba(8,14,13,.84) 0%, rgba(8,14,13,.55) 30%, rgba(8,14,13,.16) 55%, transparent 72%),
     linear-gradient(180deg, transparent 20%, rgba(8,14,13,.22) 50%, rgba(8,14,13,.78) 80%, rgba(8,14,13,.96) 100%);
 }
+
+/* Montego Bay chapter: copy top-right; scrim follows text */
+#zone-mobay{
+  align-items:flex-start;
+  justify-content:flex-end;
+}
+#zone-mobay .copy{
+  text-align:right;
+  margin-left:auto;
+  padding:8vh var(--pad-x) 0;
+  max-width:min(38em, 92vw);
+}
+#zone-mobay .hero-scrim{
+  background:
+    linear-gradient(270deg, rgba(8,14,13,.88) 0%, rgba(8,14,13,.58) 28%, rgba(8,14,13,.18) 52%, transparent 72%),
+    linear-gradient(180deg, rgba(8,14,13,.9) 0%, rgba(8,14,13,.5) 26%, rgba(8,14,13,.12) 52%, transparent 72%);
+}
+
 .zone-hero .copy{
   position:relative;
   z-index:2;
@@ -655,7 +675,7 @@ footer p:last-child{margin-bottom:0}
   padding:14px 16px;
   border:1px solid rgba(196,165,116,.28);
   border-radius:4px;
-  background:#d9cfc0;
+  background:#15221f;
   font-size:15px;
   font-weight:500;
   letter-spacing:.14em;
