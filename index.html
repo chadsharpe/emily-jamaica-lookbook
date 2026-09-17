@@ -39,8 +39,11 @@ img{display:block; max-width:100%}
 /* —— HERO (full-bleed tall viewport; portrait sources OK) —— */
 .hero{
   position:relative;
+  /* svh only — dvh changes with mobile chrome and looks like image zoom */
+  min-height:100vh;
   min-height:100svh;
-  min-height:100dvh;
+  height:100svh;
+  max-height:100svh;
   display:flex;
   align-items:flex-end;
   overflow:hidden;
@@ -529,8 +532,10 @@ footer p:last-child{margin-bottom:0}
 /* —— FULL-PAGE ZONE HEROES (tall phone OK; no short landscape strip) —— */
 .zone-hero{
   position:relative;
+  min-height:100vh;
   min-height:100svh;
-  min-height:100dvh;
+  height:100svh;
+  max-height:100svh;
   display:flex;
   align-items:flex-end;
   overflow:hidden;
