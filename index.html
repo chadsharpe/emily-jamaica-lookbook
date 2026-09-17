@@ -311,6 +311,15 @@ img{display:block; max-width:100%}
 }
 
 /* —— NESTED DAYS (stack date + copy by default) —— */
+.nest-band{
+  background:var(--paper);
+  padding:20px 0;
+  color:var(--ink);
+}
+.nest-band .nest{
+  margin-top:0;
+  margin-bottom:0;
+}
 .nest{
   max-width:980px;
   margin:24px var(--pad-x);
@@ -421,10 +430,10 @@ img{display:block; max-width:100%}
   margin:0;
 }
 .frame-stack .still{
-  padding:0 var(--pad-x) 12px;
+  padding:0 var(--pad-x) 28px;
 }
 .frame-stack .still:last-child{
-  padding-bottom:0;
+  padding-bottom:8px;
 }
 .stay-block:has(.frame-stack){
   padding-bottom:0;
@@ -632,6 +641,8 @@ footer p:last-child{margin-bottom:0}
   max-width:32em;
   text-shadow:0 1px 16px rgba(0,0,0,.45);
 }
+.zone-hero .lede + .lede{margin-top:14px; opacity:.95;}
+
 
 /* —— Wider phones / tablets —— */
 @media (min-width:480px){
@@ -877,6 +888,7 @@ footer p:last-child{margin-bottom:0}
 
 </article>
 
+<section class="nest-band">
 <section class="nest" id="d4eve">
   <div class="spread">
     <div class="date-col">
@@ -889,6 +901,7 @@ footer p:last-child{margin-bottom:0}
       <p><a href="https://www.margueritesjamaica.com/">Marguerites</a> is a short walk from the Penthouse — white linen, dark woven chairs, the sea at the edge of the table. Arrival night. Seafood. Soft light.</p>
     </div>
   </div>
+</section>
 </section>
 
 <div class="nest-stills frame-wrap">
@@ -905,52 +918,47 @@ footer p:last-child{margin-bottom:0}
 </div>
 
 <!-- Fri 5 morning: Doctor’s Cave + Pelican -->
-<article class="stay-block">
-  <section class="nest" id="d5am">
-    <div class="spread">
-      <div class="date-col">
-        <span class="num">5</span>
-        <span class="dow">Fri</span>
-      </div>
-      <div class="copy">
-        <p class="day-kicker">Morning · before we leave the bay</p>
-        <h3>Swim, then west.</h3>
-        <p>Morning at <a href="https://doctorscavebathingclub.com/doctors-cave-beach-facilities/">Doctor’s Cave</a> — the beach we watched from above yesterday, now at water level. White sand, pale turquoise, a club on the Hip Strip. Then lunch at Pelican Grill, a few minutes up Gloucester: a welcome first proper meal before the island opens west.</p>
-      </div>
+<section class="nest-band">
+<section class="nest" id="d5am">
+  <div class="spread">
+    <div class="date-col">
+      <span class="num">5</span>
+      <span class="dow">Fri</span>
     </div>
-  </section>
-</article>
-
-<div class="nest-stills frame-wrap">
-  <figure class="still">
-    <div class="frame">
-      <img src="photos/doctors-cave.jpg" alt="Doctor’s Cave Beach, Montego Bay" style="object-position:center 62%">
-      <figcaption class="band">
-        <p class="cap-place">Doctor’s Cave Beach</p>
-        <p class="line">Montego Bay’s famous swimming beach — white sand, pale water, palms along the Hip Strip.</p>
-        <p class="prose">Yesterday we looked down on this coast from the balcony. This morning we walk into it. The water is the colour people mean when they say Caribbean. We swim, we dry in the sun, then Pelican for lunch before the taxi turns inland toward Negril.</p>
-      </figcaption>
+    <div class="copy">
+      <p class="day-kicker">Morning · before we leave the bay</p>
+      <h3>Swim, then west.</h3>
+      <p>Morning at <a href="https://doctorscavebathingclub.com/doctors-cave-beach-facilities/">Doctor’s Cave</a> — the beach we watched from above yesterday, now at water level. White sand, pale turquoise, a club on the Hip Strip. Then lunch at Pelican Grill, a few minutes up Gloucester: a welcome first proper meal before the island opens west.</p>
     </div>
-  </figure>
-</div>
-
-<section class="transit">
-  <div class="transit-inner">
-    <p>Pelican Grill on Gloucester — coral facade, Bahama shutters, a Montego Bay classic since before we were born.</p>
   </div>
 </section>
+</section>
 
-<div class="nest-stills frame-wrap">
-  <figure class="still">
-    <div class="frame">
-      <img src="photos/pelican-grill-mobay.jpg" alt="The Pelican Grill exterior on Gloucester Avenue" style="object-position:center 40%">
-      <figcaption class="band">
-        <p class="cap-place">Pelican Grill</p>
-        <p class="line">Coral-orange arches, green awnings, the Hip Strip diner we will come back to on the last morning.</p>
-        <p class="prose">Lunch after the swim. A few minutes up Gloucester from Doctor’s Cave. We eat well, then the taxi turns inland — about two hours to the West End cliffs.</p>
-      </figcaption>
-    </div>
-  </figure>
+<div class="frame-stack">
+  <div class="nest-stills frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/doctors-cave.jpg" alt="Doctor’s Cave Beach, Montego Bay" style="object-position:center 62%">
+        <figcaption class="band">
+          <p class="cap-place">Doctor’s Cave Beach</p>
+          <p class="line">Montego Bay’s famous swimming beach — white sand, pale water, palms along the Hip Strip.</p>
+          <p class="prose">Yesterday we looked down on this coast from the balcony. This morning we walk into it. The water is the colour people mean when they say Caribbean. We swim, we dry in the sun, then Pelican for lunch before the taxi turns inland toward Negril.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <div class="nest-stills frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/pelican-grill-mobay.jpg" alt="The Pelican Grill exterior on Gloucester Avenue" style="object-position:center 40%">
+        <figcaption class="band">
+          <p class="cap-place">Pelican Grill</p>
+          <p class="line">Coral facade, Bahama shutters, green awnings — a Montego Bay classic on Gloucester since before we were born.</p>
+          <p class="prose">Lunch after the swim, a few minutes up Gloucester from Doctor’s Cave. Coral-orange arches, the Hip Strip diner we will come back to on the last morning. We eat well, then the taxi turns inland — about two hours to the West End cliffs.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
 </div>
 
 <section class="transit" id="leave-west">
@@ -968,12 +976,7 @@ footer p:last-child{margin-bottom:0}
     <p class="kicker">Chapter · Negril West End</p>
     <h2>Limestone,<br>thatch, ladders.</h2>
     <p class="lede">Circular roofs, stone stairs, water so clear the ladders look painted on. Five nights on this edge: first Little Bird, then Splashrock deeper toward the lighthouse.</p>
-  </div>
-</section>
-
-<section class="transit">
-  <div class="transit-inner">
-    <p>Five nights on this edge begin at Little Bird — the first cottage that is ours.</p>
+    <p class="lede">Five nights on this edge begin at Little Bird — the first cottage that is ours.</p>
   </div>
 </section>
 
@@ -1019,54 +1022,49 @@ footer p:last-child{margin-bottom:0}
   </section>
 </article>
 
-<div class="nest-stills frame-wrap">
-  <figure class="still">
-    <div class="frame">
-      <img src="photos/little-bird-cove-ladder.jpg" alt="Ladder into the cove at Little Bird" style="object-position:center 72%">
-      <figcaption class="band">
-        <p class="cap-place">The cove under Little Bird</p>
-        <p class="line">Limewashed stone into private turquoise — a blue swim ladder under a limestone overhang.</p>
-        <p class="prose">You leave the cottage by a stair that feels carved for one person at a time. The water waits in a pocket of rock. This is Friday night’s swimming hole and Saturday morning’s first plunge — ours for two tides.</p>
-      </figcaption>
-    </div>
-  </figure>
+<div class="frame-stack">
+  <div class="nest-stills frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/little-bird-cove-ladder.jpg" alt="Ladder into the cove at Little Bird" style="object-position:center 72%">
+        <figcaption class="band">
+          <p class="cap-place">The cove under Little Bird</p>
+          <p class="line">Limewashed stone into private turquoise — a blue swim ladder under a limestone overhang.</p>
+          <p class="prose">You leave the cottage by a stair that feels carved for one person at a time. The water waits in a pocket of rock. This is Friday night’s swimming hole and Saturday morning’s first plunge — ours for two tides.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+  <div class="nest-stills frame-wrap">
+    <figure class="still">
+      <div class="frame">
+        <img src="photos/little-bird-thatch-pavilion.jpg" alt="Cobalt thatch pavilion at Little Bird" style="object-position:center 50%">
+        <figcaption class="band">
+          <p class="cap-place">Thatch pavilion</p>
+          <p class="line">Cobalt thatch, hammocks, wicker — the outdoor room that faces the open sea.</p>
+          <p class="prose">Above the cove, the cobalt thatch pavilion is where the day gathers — coffee, a book, the late light. Loungers and shade on limestone. Under the rock the cove keeps its own cooler air.</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
 </div>
 
-<section class="transit">
-  <div class="transit-inner">
-    <p>Above the cove, the cobalt thatch pavilion is where the day gathers — coffee, a book, the late light.</p>
+<section class="nest-band">
+<section class="nest" id="d6">
+  <div class="spread">
+    <div class="date-col">
+      <span class="num">6</span>
+      <span class="dow">Sat</span>
+    </div>
+    <div class="copy">
+      <p class="day-kicker">Still at Little Bird</p>
+      <h3>Lunch in a cave.</h3>
+      <p>Xtabi sits on the same road, a little further toward the point. White thatch, turquoise rails, rooms of rock with the sea coming in. We eat there. Walk the caves.</p>
+      <p class="rel">Dinner we cook. Sunset on our deck — quiet, our own light, not Rick’s circus.</p>
+    </div>
   </div>
 </section>
-
-<div class="nest-stills frame-wrap">
-  <figure class="still">
-    <div class="frame">
-      <img src="photos/little-bird-thatch-pavilion.jpg" alt="Cobalt thatch pavilion at Little Bird" style="object-position:center 50%">
-      <figcaption class="band">
-        <p class="cap-place">Thatch pavilion</p>
-        <p class="line">Cobalt thatch, hammocks, wicker — the outdoor room that faces the open sea.</p>
-        <p class="prose">Loungers and shade on limestone. The pavilion is where the day gathers: coffee, a book, the late light. Under the rock the cove keeps its own cooler air.</p>
-      </figcaption>
-    </div>
-  </figure>
-</div>
-
-<article class="stay-block">
-  <section class="nest" id="d6">
-    <div class="spread">
-      <div class="date-col">
-        <span class="num">6</span>
-        <span class="dow">Sat</span>
-      </div>
-      <div class="copy">
-        <p class="day-kicker">Still at Little Bird</p>
-        <h3>Lunch in a cave.</h3>
-        <p>Xtabi sits on the same road, a little further toward the point. White thatch, turquoise rails, rooms of rock with the sea coming in. We eat there. Walk the caves.</p>
-        <p class="rel">Dinner we cook. Sunset on our deck — quiet, our own light, not Rick’s circus.</p>
-      </div>
-    </div>
-  </section>
-</article>
+</section>
 
 <div class="nest-stills frame-wrap">
   <figure class="still">
