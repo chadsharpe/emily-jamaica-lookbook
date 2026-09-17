@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emily · Jamaica · March 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -261,11 +260,6 @@ img{display:block; max-width:100%}
   line-height:1.65;
 }
 .stay-copy .designer:last-of-type{margin-bottom:0}
-.stay-embed{
-  justify-self:stretch;
-  width:100%;
-  max-width:450px;
-}
 .airbnb-embed-frame{
   width:100%;
   max-width:450px;
@@ -285,7 +279,8 @@ img{display:block; max-width:100%}
 
 /* Stay establishing still */
 .stay-establishing{
-  background:var(--deep);
+  background:#15221f;
+  padding:12px 0 16px;
 }
 .stay-establishing .still{
   max-width:1180px;
@@ -362,8 +357,8 @@ img{display:block; max-width:100%}
   font-size:15px;
 }
 .nest-stills{
-  background:var(--deep);
-  padding:8px 0 12px;
+  background:#15221f;
+  padding:12px 0 16px;
 }
 .nest-stills .still{
   max-width:920px;
@@ -382,8 +377,8 @@ img{display:block; max-width:100%}
 
 /* —— FRAMED STILLS: natural height, no landscape crop band —— */
 .frame-wrap{
-  background:var(--deep);
-  padding:0;
+  background:#15221f;
+  padding:12px 0 16px;
 }
 .still{
   max-width:1100px;
@@ -397,7 +392,9 @@ img{display:block; max-width:100%}
   position:relative;
   overflow:hidden;
   border-radius:3px;
-  background:#0a1210; /* letterbox OK for contain / short landscape */
+  background:#050a09;
+  border:1px solid rgba(196,165,116,.18);
+  box-shadow:0 8px 28px rgba(0,0,0,.28);
 }
 .frame img{
   width:100%;
@@ -416,9 +413,9 @@ img{display:block; max-width:100%}
   object-fit:contain;
 }
 .frame .band{
-  background:linear-gradient(180deg, #121c1a 0%, #0d1816 100%);
+  background:linear-gradient(180deg, #1a2a26 0%, #141f1c 100%);
   padding:18px 16px 22px;
-  border-top:1px solid rgba(196,165,116,.14);
+  border-top:1px solid rgba(196,165,116,.22);
 }
 .cap-place{
   font-size:11px;
@@ -609,10 +606,74 @@ footer p:last-child{margin-bottom:0}
 
 @media (min-width:961px){
   .stay-editorial-inner{
-    grid-template-columns:minmax(0,1.15fr) minmax(280px,420px);
-    gap:40px 56px;
+    grid-template-columns:1fr;
+    max-width:720px;
+    gap:0;
   }
-  .stay-embed{justify-self:end}
+}
+
+/* —— Airbnb listings drawer (bottom) —— */
+.airbnb-drawer{
+  background:var(--deep);
+  color:var(--cream);
+  padding:2vh var(--pad-x) 4vh;
+  border-top:1px solid rgba(196,165,116,.22);
+}
+.airbnb-drawer details{
+  max-width:720px;
+  margin:0 auto;
+}
+.airbnb-drawer summary{
+  list-style:none;
+  cursor:pointer;
+  min-height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 16px;
+  border:1px solid rgba(196,165,116,.28);
+  border-radius:4px;
+  background:#15221f;
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  -webkit-tap-highlight-color:transparent;
+}
+.airbnb-drawer summary::-webkit-details-marker{display:none}
+.airbnb-drawer summary::after{
+  content:"+";
+  font-size:22px;
+  line-height:1;
+  color:var(--cream);
+  flex:0 0 auto;
+}
+.airbnb-drawer details[open] summary::after{content:"–"}
+.airbnb-drawer summary:hover{color:var(--cream); border-color:rgba(196,165,116,.45)}
+.airbnb-drawer-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  margin-top:22px;
+}
+.airbnb-card .airbnb-card-label{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--teak-soft);
+  margin:0 0 12px;
+}
+.airbnb-drawer .airbnb-embed-frame{
+  max-width:100%;
+  width:100%;
+  height:min(520px, 78vh);
+}
+@media (min-width:721px){
+  .airbnb-drawer{padding:3vh 7vw 5vh}
+  .airbnb-drawer-grid{max-width:720px; margin-left:auto; margin-right:auto}
 }
 </style>
 </head>
@@ -693,12 +754,7 @@ footer p:last-child{margin-bottom:0}
         <p class="designer">A king suite with a private balcony that opens onto the bay: woven swing chair, glass-top table, the Hip Strip thinned to palms and turquoise. Inside — tufted leather headboard, teal accents, pendant lights, sliding doors that keep the sea in the room.</p>
         <p class="designer">Closest stay to the airport. We arrive, we stand on the balcony, we walk to dinner on Gloucester.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="46616408" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/46616408?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -730,26 +786,7 @@ footer p:last-child{margin-bottom:0}
     </div>
   </section>
 
-  <section class="nest" id="d4eve">
-    <div class="spread">
-      <div class="date-col">
-        <span class="num">4</span>
-        <span class="dow">Thu</span>
-      </div>
-      <div class="copy">
-        <p class="day-kicker">Evening · Gloucester Avenue</p>
-        <h3>Dinner by the water.</h3>
-        <p><a href="https://www.margueritesjamaica.com/">Marguerites</a> is a short walk from the Penthouse — white linen, dark woven chairs, the sea at the edge of the table. Arrival night. Seafood. Soft light.</p>
-      </div>
-    </div>
-  </section>
 </article>
-
-<section class="transit">
-  <div class="transit-inner">
-    <p>Inside the suite: wood, teal, and the same sliding doors that keep the bay in the room overnight.</p>
-  </div>
-</section>
 
 <div class="nest-stills frame-wrap">
   <figure class="still">
@@ -764,11 +801,21 @@ footer p:last-child{margin-bottom:0}
   </figure>
 </div>
 
-<section class="transit">
-  <div class="transit-inner">
-    <p>Then dinner at Marguerites — seafood on Gloucester, white linen, the water right there.</p>
-  </div>
-</section>
+<article class="stay-block">
+  <section class="nest" id="d4eve">
+    <div class="spread">
+      <div class="date-col">
+        <span class="num">4</span>
+        <span class="dow">Thu</span>
+      </div>
+      <div class="copy">
+        <p class="day-kicker">Evening · Gloucester Avenue</p>
+        <h3>Dinner by the water.</h3>
+        <p><a href="https://www.margueritesjamaica.com/">Marguerites</a> is a short walk from the Penthouse — white linen, dark woven chairs, the sea at the edge of the table. Arrival night. Seafood. Soft light.</p>
+      </div>
+    </div>
+  </section>
+</article>
 
 <div class="nest-stills frame-wrap">
   <figure class="still">
@@ -867,12 +914,7 @@ footer p:last-child{margin-bottom:0}
         <p class="designer">Designed for the breeze: louvers instead of glass, teak and stone underfoot, a thatch pavilion in cobalt that faces the open Caribbean. The architecture is the climate — shade, air, and a stair that ends in turquoise.</p>
         <p class="designer">We cook Friday night. Saturday we walk the same road to lunch in a cave. Sunset on our own deck — not the circus down the road.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="15821562" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/15821562?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -1030,12 +1072,7 @@ footer p:last-child{margin-bottom:0}
         <p class="nights">Sunday, Monday, Tuesday · Three nights on the cliff edge — louvers, a king bed, a bar that opens onto the water.</p>
         <p class="designer">Warm wood walls, full-height louvers, a bar built like a boat cabin that faces open sea. Live between the bed, the bar, and the ladders. Same coast as Little Bird, further from town, quieter at night.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="1160765954674143596" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/1160765954674143596?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -1261,12 +1298,7 @@ footer p:last-child{margin-bottom:0}
         <p class="nights">Wednesday and Thursday · Two nights on the sand at Jamwest, about halfway along Seven Mile Beach.</p>
         <p class="designer">A private king suite with a navy sofa, a kitchenette, and glass that looks straight at the bay. Modern, calm, designed for bare feet. Sliding doors to palms and turquoise.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="1337960652423108627" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/1337960652423108627?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -1425,12 +1457,7 @@ footer p:last-child{margin-bottom:0}
         <p class="designer">A studio with a soaring plank ceiling, leaf-blade fan, and sliding doors that open onto a wooden balcony over the water. Queen bed, kitchenette, loft above. Outside: gardens, a saltwater pool, and a crescent of private sand that belongs to the place.</p>
         <p class="designer">This is the quiet after the cliffs and the mile. We stay put on purpose.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="1328379786557452951" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/1328379786557452951?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -1570,12 +1597,7 @@ footer p:last-child{margin-bottom:0}
         <p class="nights">Tuesday night, Wednesday morning · A modern king apartment up the hill — white rooms, mustard pillow, balcony over the harbour.</p>
         <p class="designer">Clean lines, white walls, a living room that becomes outdoor dining when the doors slide open. Designed for the last night: dress up, go into town, come home to the harbour lights.</p>
       </div>
-      <div class="stay-embed">
-        <div class="airbnb-embed-frame" data-id="729526968411462690" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
-          <a href="https://www.airbnb.com/rooms/729526968411462690?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
-          <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
-        </div>
-      </div>
+      
     </div>
   </header>
 
@@ -1715,6 +1737,51 @@ footer p:last-child{margin-bottom:0}
       <p class="note">Pelican first. Then the airport. Home before dawn the next day.</p>
     </div>
   </div>
+</section>
+
+<section class="airbnb-drawer" id="airbnb-listings">
+  <details>
+    <summary>Airbnb listings</summary>
+    <div class="airbnb-drawer-grid">
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Ocean View Penthouse · Montego Bay</p>
+        <div class="airbnb-embed-frame" data-id="46616408" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/46616408?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Little Bird Cottage · West End</p>
+        <div class="airbnb-embed-frame" data-id="15821562" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/15821562?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Splashrock · West End</p>
+        <div class="airbnb-embed-frame" data-id="1160765954674143596" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1160765954674143596?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Beachfront Suite · Seven Mile</p>
+        <div class="airbnb-embed-frame" data-id="1337960652423108627" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1337960652423108627?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Coconut Studio · Papaya Beach</p>
+        <div class="airbnb-embed-frame" data-id="1328379786557452951" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/1328379786557452951?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+      <div class="airbnb-card">
+        <p class="airbnb-card-label">Vera · Montego Bay</p>
+        <div class="airbnb-embed-frame" data-id="729526968411462690" data-view="home" data-hide-price="true" data-hide-reviews="false" style="width:100%;max-width:450px;height:480px;margin:0">
+          <a href="https://www.airbnb.com/rooms/729526968411462690?guests=1&amp;adults=1" rel="nofollow">View on Airbnb</a>
+        </div>
+      </div>
+    </div>
+  </details>
+  <script async src="https://www.airbnb.com/embeddable/airbnb_jssdk.js"></script>
 </section>
 
 <footer>
